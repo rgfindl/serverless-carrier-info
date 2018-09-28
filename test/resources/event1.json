@@ -1,0 +1,114 @@
+{
+  "resource": "/",
+  "path": "/",
+  "httpMethod": "POST",
+  "headers": {
+      "Accept": "*/*",
+      "Cache-Control": "max-age=259200",
+      "CloudFront-Forwarded-Proto": "https",
+      "CloudFront-Is-Desktop-Viewer": "true",
+      "CloudFront-Is-Mobile-Viewer": "false",
+      "CloudFront-Is-SmartTV-Viewer": "false",
+      "CloudFront-Is-Tablet-Viewer": "false",
+      "CloudFront-Viewer-Country": "US",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Host": "j7eqjuc9w6.execute-api.us-east-1.amazonaws.com",
+      "User-Agent": "TwilioProxy/1.1",
+      "Via": "1.1 d2830b8d3701db8707a40e166731991a.cloudfront.net (CloudFront)",
+      "X-Amz-Cf-Id": "5tPmFNEkSA51ex0p5GhlueSVOjcS_Q0GfJq1XFZxOHur8PzkqW9kgw==",
+      "X-Amzn-Trace-Id": "Root=1-5bab9ba5-39dae86753d221441721d1ff",
+      "X-Forwarded-For": "18.209.58.12, 54.239.145.17",
+      "X-Forwarded-Port": "443",
+      "X-Forwarded-Proto": "https",
+      "X-Twilio-Signature": "5RDKHkt5FJgOSMiFYGn+KKXcGyY="
+  },
+  "multiValueHeaders": {
+      "Accept": [
+          "*/*"
+      ],
+      "Cache-Control": [
+          "max-age=259200"
+      ],
+      "CloudFront-Forwarded-Proto": [
+          "https"
+      ],
+      "CloudFront-Is-Desktop-Viewer": [
+          "true"
+      ],
+      "CloudFront-Is-Mobile-Viewer": [
+          "false"
+      ],
+      "CloudFront-Is-SmartTV-Viewer": [
+          "false"
+      ],
+      "CloudFront-Is-Tablet-Viewer": [
+          "false"
+      ],
+      "CloudFront-Viewer-Country": [
+          "US"
+      ],
+      "Content-Type": [
+          "application/x-www-form-urlencoded"
+      ],
+      "Host": [
+          "j7eqjuc9w6.execute-api.us-east-1.amazonaws.com"
+      ],
+      "User-Agent": [
+          "TwilioProxy/1.1"
+      ],
+      "Via": [
+          "1.1 d2830b8d3701db8707a40e166731991a.cloudfront.net (CloudFront)"
+      ],
+      "X-Amz-Cf-Id": [
+          "5tPmFNEkSA51ex0p5GhlueSVOjcS_Q0GfJq1XFZxOHur8PzkqW9kgw=="
+      ],
+      "X-Amzn-Trace-Id": [
+          "Root=1-5bab9ba5-39dae86753d221441721d1ff"
+      ],
+      "X-Forwarded-For": [
+          "18.209.58.12, 54.239.145.17"
+      ],
+      "X-Forwarded-Port": [
+          "443"
+      ],
+      "X-Forwarded-Proto": [
+          "https"
+      ],
+      "X-Twilio-Signature": [
+          "5RDKHkt5FJgOSMiFYGn+KKXcGyY="
+      ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
+  "requestContext": {
+      "resourceId": "9g7yrxxwk5",
+      "resourcePath": "/",
+      "httpMethod": "POST",
+      "extendedRequestId": "N1VB5GI6oAMFhOw=",
+      "requestTime": "26/Sep/2018:14:45:57 +0000",
+      "path": "/Prod",
+      "accountId": "132093761664",
+      "protocol": "HTTP/1.1",
+      "stage": "Prod",
+      "requestTimeEpoch": 1537973157719,
+      "requestId": "e0e7500a-c19a-11e8-8673-d1277958aa74",
+      "identity": {
+          "cognitoIdentityPoolId": null,
+          "accountId": null,
+          "cognitoIdentityId": null,
+          "caller": null,
+          "sourceIp": "18.209.58.12",
+          "accessKey": null,
+          "cognitoAuthenticationType": null,
+          "cognitoAuthenticationProvider": null,
+          "userArn": null,
+          "userAgent": "TwilioProxy/1.1",
+          "user": null
+      },
+      "apiId": "j7eqjuc9w6"
+  },
+  "body": "ToCountry=US&ToState=Maryland&SmsMessageSid=SM6b0f2054e6804bf339f9c8c5767032e4&NumMedia=0&ToCity=&FromZip=21784&SmsSid=SM6b0f2054e6804bf339f9c8c5767032e4&FromState=MD&SmsStatus=received&FromCity=BALTIMORE&Body=1 443-956-8643&FromCountry=US&To=%2B16677714152&ToZip=&NumSegments=1&MessageSid=SM6b0f2054e6804bf339f9c8c5767032e4&AccountSid=ACae0dae3cf7295ccc267aa48f65342c08&From=%2B14103361660&ApiVersion=2010-04-01",
+  "isBase64Encoded": false
+}
