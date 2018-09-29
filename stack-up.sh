@@ -15,7 +15,8 @@ aws cloudformation deploy \
 --capabilities CAPABILITY_IAM \
 --parameter-overrides \
 TwilioAccountSid=$1 \
-TwilioAuthToken=$2
+TwilioAuthToken=$2 \
+IOPipeToken=$3
 
 # Show the CloudFormation output params.
 aws cloudformation describe-stacks  \

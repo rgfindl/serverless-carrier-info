@@ -2,6 +2,11 @@ const querystring = require('querystring');
 const _ = require('lodash');
 const axios = require('axios');
 
+const iopipe = require('@iopipe/iopipe')({
+  token: process.env.IOPipeToken,
+  enabled: !_.isNil(process.env.IOPipeToken)
+});
+
 const functions = {};
 
 functions.generateResponse = (msgs) => {
@@ -35,7 +40,7 @@ functions.escapeXml = (text) => {
   return output;
 };
 
-exports.handler = async (event, context, callback) => {
+exports.handler = iopipe(async (event, context, callback) => {
   // console.log(JSON.stringify(event));
   try {
     // Parse Twilio params.
@@ -48,10 +53,10 @@ exports.handler = async (event, context, callback) => {
 
     // Create response
     const msgs = [
-      `Carrier Info: (${functions.escapeXml(carrierInfo.carrier.type)}) ${functions.escapeXml(carrierInfo.carrier.name)}`
+      `${functions.escapeXml(carrierInfo.carrier.name)} - (${functions.escapeXml(carrierInfo.carrier.type)})`
     ];
     if (carrierInfo.caller_name.caller_name) {
-      msgs.push(`Caller Name: ${functions.escapeXml(carrierInfo.caller_name.caller_name)}`);
+      msgs.push(`${functions.escapeXml(carrierInfo.caller_name.caller_name)}`);
     }
     // console.log(JSON.stringify(msgs, null, 3));
 
@@ -65,4 +70,4 @@ exports.handler = async (event, context, callback) => {
     console.log(err);
     return callback(err, 'error');
   }
-};
+});

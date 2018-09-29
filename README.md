@@ -2,20 +2,23 @@
 
 This project is for the Serverless Apps for Social Good Hackathon.
 
-Law enforcement officers fighting human trafficing need an easy way to get a phone numbers caller ID and carrier info.
+Law enforcement officers, fighting human trafficking, need an easy way to get a phone numbers caller ID and carrier info.
 
-This Serverless App, with a Twilio integration, make that possible.
+This Serverless App, with a Twilio integration, makes that possible.
 
 This function is triggered by a Twilio webhook (via API Gateway).  
 
-SENT: 4101238765
-RECEIVED: Caller Name: FINDLEY RANDOLPH
-RECEIVED: Carrier Info: (mobile) T-Mobile USA, Inc.
+Example:
+```
+SENT:     4101238765
+RECEIVED: (mobile) T-Mobile USA, Inc.
+          FINDLEY RANDOLPH 
+```
 
 ## Twilio Account
-First we need to create a Twilio account and get the `Account SID` and `Auth Token`
+First, we need to create a Twilio account and get the `Account SID` and `Auth Token`
 
-Create your Twillio account:
+Create your Twilio account here:
 https://www.twilio.com/try-twilio
 
 ## Package and Deploy
@@ -23,7 +26,7 @@ Now it's time to create our Lambda function.
 
 `npm run stack-up`
 
-There is an output parameter called `ApiUrl` that you will need in the next step.  This will be your Twillio webhook url.
+There is an output parameter called `ApiUrl` that you will need in the next step.  This will be your Twilio webhook url.
 
 ## Twillio Webhook Setup
 Twilio needs to call our Lambda function every time it gets a message. 

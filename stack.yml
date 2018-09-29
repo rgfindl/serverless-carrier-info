@@ -6,12 +6,15 @@ Description: Serverless Carrier Info
 Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
-      -
-        Label:
-          default: "Configuration"
+      - Label:
+          default: "Required"
         Parameters:
           - TwilioAccountSid
           - TwilioAuthToken
+      - Label:
+          default: "Optional"
+        Parameters:
+          - IOPipeToken
 
 Parameters:
   TwilioAccountSid:
@@ -20,6 +23,10 @@ Parameters:
   TwilioAuthToken:
     Type: String
     Description: Twilio Auth Token
+  IOPipeToken:
+    Type: String
+    Description: iopipe.com token
+    Default: ''
 
 Resources:
 
@@ -43,6 +50,7 @@ Resources:
         Variables:
           TwilioAccountSid: !Ref TwilioAccountSid
           TwilioAuthToken: !Ref TwilioAuthToken
+          IOPipeToken: !Ref IOPipeToken
 
 Outputs:
   ApiUrl:

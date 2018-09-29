@@ -4,10 +4,14 @@ Metadata:
   AWS::CloudFormation::Interface:
     ParameterGroups:
     - Label:
-        default: Configuration
+        default: Required
       Parameters:
       - TwilioAccountSid
       - TwilioAuthToken
+    - Label:
+        default: Optional
+      Parameters:
+      - IOPipeToken
 Outputs:
   ApiUrl:
     Description: URL of your API endpoint
@@ -20,6 +24,10 @@ Outputs:
         - Ref: AWS::Region
         - .amazonaws.com/Prod
 Parameters:
+  IOPipeToken:
+    Default: ''
+    Description: iopipe.com token
+    Type: String
   TwilioAccountSid:
     Description: Twilio Account SID
     Type: String
@@ -29,9 +37,11 @@ Parameters:
 Resources:
   ApiFunction:
     Properties:
-      CodeUri: s3://serverless-carrier-info/c764bd87d221c4a9e48e2a350a01bea6
+      CodeUri: s3://serverless-carrier-info/79da43c37cea3970f874a34b248fb0f5
       Environment:
         Variables:
+          IOPipeToken:
+            Ref: IOPipeToken
           TwilioAccountSid:
             Ref: TwilioAccountSid
           TwilioAuthToken:

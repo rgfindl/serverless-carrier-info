@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "sh ./start-sam-local.sh",
-    "test": "mocha",
+    "test": "IOPIPE_ENABLED=false mocha",
     "stack-up": "sh ./stack-up.sh"
   },
   "dependencies": {
+    "@iopipe/iopipe": "^1.10.0",
     "axios": "^0.18.0",
     "lodash": "^4.17.10"
   },
