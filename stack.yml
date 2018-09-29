@@ -3,17 +3,19 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: Serverless Carrier Info
 
-Metadata:
-  AWS::CloudFormation::Interface:
-    ParameterGroups:
-      - Label:
+Metadata: 
+  AWS::CloudFormation::Interface: 
+    ParameterGroups: 
+      - 
+        Label: 
           default: "Required"
-        Parameters:
+        Parameters: 
           - TwilioAccountSid
           - TwilioAuthToken
-      - Label:
+      - 
+        Label: 
           default: "Optional"
-        Parameters:
+        Parameters: 
           - IOPipeToken
 
 Parameters:
@@ -25,7 +27,7 @@ Parameters:
     Description: Twilio Auth Token
   IOPipeToken:
     Type: String
-    Description: iopipe.com token
+    Description: 'Serverless DevOps?'
     Default: ''
 
 Resources:

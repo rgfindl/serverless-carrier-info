@@ -15,6 +15,8 @@ RECEIVED: (mobile) T-Mobile USA, Inc.
           FINDLEY RANDOLPH 
 ```
 
+Deploy via the AWS Serverless Application Repo here: https://serverlessrepo.aws.amazon.com/#/applications/arn:aws:serverlessrepo:us-east-1:132093761664:applications~Carrier-Info
+
 ## Twilio Account
 First, we need to create a Twilio account and get the `Account SID` and `Auth Token`
 
