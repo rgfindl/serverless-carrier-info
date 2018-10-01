@@ -44,3 +44,9 @@ Twilio needs to call our Lambda function every time it gets a message.
 
 [![](docs/webhook.png)](webhook.png)
 
+## IOpipe
+Serverless monitoring?
+
+Click here to get your IOpipe token so you can monitor the performance of your Lambdas.  https://www.iopipe.com/
+
+IOpipe use is optional.  If you don't want to use IOpipe then just leave the `IOPipeToken` param empty when deploying.
